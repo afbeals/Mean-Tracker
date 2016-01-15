@@ -1,0 +1,89 @@
+<div class="row">
+  <div id="main_container_show" class="col-md-8 col-lg-8 col-sm-8 col-xs-6 col-md-offset-2 col-lg-offset-2 col-sm-offset-2 col-xs-offset-3 row">
+  <div id="content_container" style="display: none;">
+      <div class="show_img col-lg-5 col-md-5 col-sm-7 col-xs-12">
+         <img src="{{show_poster}}" alt="show.jpg">
+      </div>
+     
+      <div class="show_info col-lg-5 col-md-5 col-sm-7 col-xs-12">
+        <h4 id="show_info_title">{{show_title}}:</h4>
+        <ul id="show_info_list">
+          <li><b>Seasons:</b> {{show.num_seasons}}</li>
+          <li><b>Episodes:</b> {{show.num_episodes}}</li>
+          <li><b>Category:</b> {{show_genre}}</li>
+          <li><b>Average running time:</b> {{show_runtime}}</li>
+          <li><b>Synopsis:</b> {{show_plot}}</li>
+          <li>
+            <form>
+              <label>
+                <input type="checkbox" ng-model="add_show.showTitle" value="Bob's Burgers" /> Add show to tracker?
+              </label>
+              <button id="show_info_submit" ng-click="addShow(title)">Submit</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+      <div class="tabs">
+        <ul class="tab-links cust_tab_links">
+            <li class="active"><a href="#tab1">Episodes</a></li>
+            <li><a href="#tab2">Tracker</a></li>
+            <li><a href="#tab3">Friends Tracker </a></li>
+            <li><a href="#tab4">Set viewing time</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="tab1" class="tab active">
+                <table id="episodes_table" class="table table-striped">
+                  <tr>
+                    <th>Episode Name</th>
+                    <th>Season</th>
+                    <th>Episode Number</th>
+                  </tr>
+
+                </table>
+            </div>
+            <div id="tab2" class="tab">
+                <table class="table table-striped">
+                  <tr>
+                    <th>Episode Name</th>
+                    <th>Episode Number</th>
+                    <th>Watched</th>
+                  </tr>
+                  <tr>
+                    <td>Human Flesh</td>
+                    <td>1</td>
+                    <td><input type="checkbox"></td>
+                  </tr>
+                  <tr>
+                    <td>Crawl Space</td>
+                    <td>2</td>
+                    <td><input type="checkbox"></td>
+                  </tr>
+                </table>
+            </div>
+            <div id="tab3" class="tab">
+                <table class="table table-striped">
+                  <tr>
+                    <th>Friend</th>
+                    <th>Tracking</th>
+                    <th>Last Episode</th>
+                  </tr>
+                  <tr>
+                    <td>KIsaac</td>
+                    <td><input type="checkbox" checked></td>
+                    <td>13</td>
+                  </tr>
+                  <tr>
+                    <td>PRini</td>
+                    <td><input type="checkbox"></td>
+                    <td></td>
+                  </tr>
+                </table>
+            </div>
+            <div id="tab4" class="tab">
+                <p>under contstruction</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="row">
+  <div id="main_container_login" class="col-md-6 col-lg-4 col-sm-6 col-xs-8 col-md-offset-3 col-lg-offset-4 col-sm-offset-3 col-xs-offset-1 row">
+    <form class="form-group" name="loginUserForm" novalidate>
+      <label class="login_form col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        Username: <input class="form-control" type="text" name="username" ng-model="login_user.username" required />
+        <div ng-messages="loginUserForm.username.$error" ng-messages-include="error-messages.html" ng-show="loginUserForm.username.$touched"></div>
+      </label>
+      <label class="login_form col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        Password: <input class="form-control" type="password" name="password" ng-model="login_user.password" required />
+        <div ng-messages="loginUserForm.password.$error" ng-messages-include="error-messages.html" ng-show="loginUserForm.password.$touched"></div>
+      </label>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-5 col-md-offset-4 col-sm-offset-4">
+        <button id="login_form_button" ng-click="loginUser()" ng-disabled="loginUserForm.$invalid">Login</button>
+      </div>
+    </form>
+    
+    <div id="login_page_register" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <p>Need an Account?</p><a href="#/register">Register Here</a>
+    </div>
+  </div>
+</div>

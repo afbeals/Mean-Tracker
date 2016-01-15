@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="StrackerApp" lang="en">
+<head>
+  <meta name="Stracker" description="Help you keep track of all the shows youre currently trying to catch up on!" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stracker, Your Show Tracker</title>
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <!-- Angular Routes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
+  <!-- Bootstrap/Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+  <!-- CSS Files -->
+  <link rel="stylesheet" type="text/css" href="./css/stracker_style.css">
+  <!-- ngmessages for client side validation-->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-messages.js"></script>
+  <!-- initialize app -->
+  <script type="text/javascript">
+    var Stracker = angular.module('StrackerApp', ['ngRoute','ngMessages']);
+  </script>
+  <!-- Angular Routing Source -->
+  <script type="text/javascript" src="./scripts/routing_script.js"></script>
+  <!-- Factory Source -->
+  <script type="text/javascript" src="./scripts/factory_script.js"></script>
+  <!-- Controller Source -->
+  <script type="text/javascript" src="./scripts/controller_script.js"></script>
+
+  <!-- Testing Script -->
+  <!-- <script type="text/javascript" src="test_scripts.js"></script> -->
+</head>
+<body class="container-fluid">
+  <!-- Nav Bar Start -->
+    <div id="nav_shadow" ng-controller="NavbarController">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="" ng-click="goToTracker()">Stracker</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="" ng-click="goToShows()">Shows</a></li>
+<!--               <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Networks <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <form>
+                      <input type="text" placeholder="Network..." class="form-control" />
+                    </form>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="" ng-click="goToShows()">View All</a></li>
+                </ul>
+              </li> -->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="" ng-click="goToTracker()">My Tracker</a></li>
+              <li><a href="#/login" ng-click="logOutUser()">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  <!-- Nav Bar End -->
+  <!-- Main content -->
+    <div class="container-fluid" ng-view>
+
+    </div>
+  <!-- Main Content End -->
+</body>
+</html>
+
+
+<!-- questions: should always use res.end()? [in routes.js] -->

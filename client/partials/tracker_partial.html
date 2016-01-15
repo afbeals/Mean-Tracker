@@ -1,0 +1,37 @@
+<div class="row">
+  <div id="main_container_tracker" class="col-md-7 col-lg-7 col-sm-7 col-xs-6 col-md-offset-3 col-lg-offset-3 col-sm-offset-3 col-xs-offset-3 row">
+    <div id="tracker_table" class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+      <table class="tracker_table table table-striped" >
+        <tr>
+          <th>My Tracked Shows</th>
+          <th>Last Watched</th>
+        </tr>
+        <tr ng-repeat="show in user._tracker.show">
+          <td><a ng-click="display_tracker_show(show.title)">{{show.title}}</a> /<a ng-click="goToShow(show.title)"> View Show</a> / <a ng-click="">Remove</a></td>
+          <td>{{show.last_watched}}</td>
+        </tr>
+      </table>
+    </div>
+    <div id="tracker_show_info" class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+      <img class="col-lg-12" id="tracker_show_img" src="" alt="">
+      <div>
+        <h3><b id="tracker_show_title"></b></h3>
+        <p><b>Seasons:</b> {{show.num_seasons}}</p>
+        <p><b>Episodes:</b> {{show.num_episodes}}</p>
+      </div>
+    </div> 
+    <div id="friends_table" class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+      <table class="table table-striped">
+        <tr>
+          <th>My Friends</th>
+        </tr>
+        <tr>
+          <td>KIsaac</td>
+        </tr>
+        <tr>
+          <td>PRini</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
