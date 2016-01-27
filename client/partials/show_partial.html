@@ -16,7 +16,7 @@
           <li>
             <form>
               <label>
-                <input type="checkbox" ng-model="add_show.showTitle" value="Bob's Burgers" /> Add show to tracker?
+                <input type="checkbox" ng-model="add_show.showTitle" value="Bob's Burgers" ng-change="isChecked(add_show.showTitle)" /> Add show to tracker?
               </label>
               <button id="show_info_submit" ng-click="addShow(show_title)">Submit</button>
             </form>
