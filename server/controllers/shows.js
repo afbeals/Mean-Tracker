@@ -79,11 +79,9 @@ module.exports =
         }) 
       });
     });
-
-
-
-    
   },
+
+  addShow
 
   addToTracker: function(req,res)
   {
