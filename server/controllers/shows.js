@@ -81,7 +81,7 @@ module.exports =
     });
   },
 
-  addShow
+
 
   addToTracker: function(req,res)
   {
@@ -115,7 +115,7 @@ module.exports =
                 }
                 else
                 {
-                  Tracker.update({_id:tracker.id}, {$push:{show:{title:"2 Broke Girls"}}}, function(err)
+                  Tracker.update({_id:tracker.id}, {$push:{show:{title:req.body.title}}}, function(err)
                     {
                       if(err)
                       {
@@ -126,7 +126,6 @@ module.exports =
                         console.log(req.session.username +" tracker info added");
                       }
                     });
-                  
                 }
               })
                
@@ -135,7 +134,7 @@ module.exports =
         }
         else
         {
-          Tracker.update({_id: user._tracker}, {$push:{show:{title:"Bob's Burgers"}}}, function(err)
+          Tracker.update({_id: user._tracker}, {$push:{show:{title:req.body.title}}}, function(err)
             {
               if(err)
               {

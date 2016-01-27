@@ -61,7 +61,12 @@ module.exports = function(app)
 
   app.post('/test', function(req, res)
   {
-    shows.addShow(req,res);
+   
+  })
+
+  app.post('/addShow', function(req, res)
+  {
+    shows.addToTracker(req,res);
   })
 
 }

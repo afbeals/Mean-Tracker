@@ -123,7 +123,15 @@
         $scope.show = show;
       })
 
-    })  
+    })
+
+    $scope.addShow = function(title)
+    {
+      ShowsFactory.addShow(title);
+    }
+
+
+
   });
 
 // Show Controller

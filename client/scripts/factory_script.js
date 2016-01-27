@@ -112,6 +112,18 @@
       })
     }
 
+    factory.addShow = function(title)
+    {
+      show = {title: title};
+      $http.post('/addShow', show).success(function()
+      {
+        alert("successfully added!");
+      }).error(function()
+      {
+        console.log("was not successful");
+      })
+    }
+
     return factory;
   });
 
